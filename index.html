@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
     <meta
-      name="author"
-      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+      name="description"
+      content="Weekly Reading Reflections: A semester-long notebook on public interest technology, written for 11.458 Crowd Sourced City."
     />
+    <meta name="author" content="Pietro Chiri" />
     <meta name="generator" content="Astro v5.13.2" />
-    <title>Blog Template · Bootstrap v5.3</title>
+    <title>Weekly Reading Reflections · Pietro Chiri</title>
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/5.3/examples/blog/"
     />
-    <script src="assets/js/color-modes.js"></script>
-    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../assets/js/color-modes.js"></script>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap"
@@ -95,6 +95,156 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+
+      /* Fixed black-on-white color scheme */
+      html,
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+      a {
+        color: #000000;
+        text-decoration: underline;
+      }
+      a:hover,
+      a:focus {
+        color: #333333;
+      }
+      .bg-body-tertiary,
+      .bg-body-secondary {
+        background-color: #f5f5f5 !important;
+      }
+      .text-body-secondary,
+      .text-body-emphasis,
+      .link-body-emphasis,
+      .link-secondary,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      li,
+      td,
+      th {
+        color: #000000 !important;
+      }
+      .border-bottom,
+      .border-top,
+      .border {
+        border-color: #000000 !important;
+      }
+
+      .course-header {
+        text-align: center;
+        padding: 2rem 0 1rem;
+      }
+      .course-header h1 {
+        font-family: "Playfair Display", serif;
+        font-weight: 900;
+        font-size: 2.5rem;
+        white-space: nowrap;
+        margin-bottom: 0.25rem;
+      }
+      @media (max-width: 991.98px) {
+        .course-header h1 {
+          font-size: 1.9rem;
+        }
+      }
+      @media (max-width: 767.98px) {
+        .course-header h1 {
+          font-size: 1.4rem;
+        }
+      }
+      @media (max-width: 575.98px) {
+        .course-header h1 {
+          font-size: 1rem;
+        }
+      }
+      .course-header p {
+        margin: 0.15rem 0;
+      }
+      .assignment-toc a {
+        text-decoration: none;
+      }
+      .assignment-toc a:hover {
+        text-decoration: underline;
+      }
+
+      .assignment-card {
+        display: block;
+        color: #000000;
+        text-decoration: none;
+        border: 1px solid #000000;
+        border-radius: 0.5rem;
+        margin-bottom: 1.25rem;
+        overflow: hidden;
+        transition:
+          box-shadow 0.15s ease,
+          transform 0.15s ease;
+      }
+      .assignment-card:hover,
+      .assignment-card:focus {
+        color: #000000;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+        transform: translateY(-2px);
+      }
+      .assignment-card .row {
+        margin: 0;
+        height: 100%;
+      }
+      .assignment-card-frame {
+        width: 100%;
+        aspect-ratio: 25 / 9;
+      }
+      .assignment-card-body {
+        height: 100%;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .assignment-card-body h3 {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 1.35rem;
+        margin-bottom: 0.5rem;
+      }
+      .assignment-card-meta {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+      .assignment-card-status {
+        font-style: italic;
+        margin-bottom: 0;
+      }
+      .assignment-thumb {
+        height: 100%;
+        min-height: 100%;
+        background-color: #d9d9d9;
+        border-left: 1px solid #000000;
+      }
+      .assignment-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      @media (max-width: 575.98px) {
+        .assignment-card-body {
+          padding: 0.6rem 0.75rem;
+        }
+        .assignment-card-body h3 {
+          font-size: 0.85rem;
+          margin-bottom: 0.2rem;
+        }
+        .assignment-card-meta,
+        .assignment-card-status {
+          font-size: 0.7rem;
+          margin-bottom: 0.15rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -123,76 +273,6 @@
         ></path>
       </symbol>
     </svg>
-    <div
-      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
-    >
-      <button
-        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-        id="bd-theme"
-        type="button"
-        aria-expanded="false"
-        data-bs-toggle="dropdown"
-        aria-label="Toggle theme (auto)"
-      >
-        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
-          <use href="#circle-half"></use>
-        </svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul
-        class="dropdown-menu dropdown-menu-end shadow"
-        aria-labelledby="bd-theme-text"
-      >
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center"
-            data-bs-theme-value="light"
-            aria-pressed="false"
-          >
-            <svg class="bi me-2 opacity-50" aria-hidden="true">
-              <use href="#sun-fill"></use>
-            </svg>
-            Light
-            <svg class="bi ms-auto d-none" aria-hidden="true">
-              <use href="#check2"></use>
-            </svg>
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center"
-            data-bs-theme-value="dark"
-            aria-pressed="false"
-          >
-            <svg class="bi me-2 opacity-50" aria-hidden="true">
-              <use href="#moon-stars-fill"></use>
-            </svg>
-            Dark
-            <svg class="bi ms-auto d-none" aria-hidden="true">
-              <use href="#check2"></use>
-            </svg>
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center active"
-            data-bs-theme-value="auto"
-            aria-pressed="true"
-          >
-            <svg class="bi me-2 opacity-50" aria-hidden="true">
-              <use href="#circle-half"></use>
-            </svg>
-            Auto
-            <svg class="bi ms-auto d-none" aria-hidden="true">
-              <use href="#check2"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol
         id="aperture"
@@ -221,538 +301,290 @@
       </symbol>
     </svg>
     <div class="container">
-      <header class="border-bottom lh-1 py-3">
-        <div class="row flex-nowrap justify-content-between align-items-center">
-          <div class="col-4 pt-1">
-            <a class="link-secondary" href="#">Subscribe</a>
-          </div>
-          <div class="col-4 text-center">
-            <a
-              class="blog-header-logo text-body-emphasis text-decoration-none"
-              href="#"
-              >Large</a
-            >
-          </div>
-          <div class="col-4 d-flex justify-content-end align-items-center">
-            <a class="link-secondary" href="#" aria-label="Search">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="mx-3"
-                role="img"
-                viewBox="0 0 24 24"
-              >
-                <title>Search</title>
-                <circle cx="10.5" cy="10.5" r="7.5"></circle>
-                <path d="M21 21l-5.2-5.2"></path>
-              </svg>
-            </a>
-            <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
-          </div>
-        </div>
+      <header class="course-header border-bottom">
+        <h1>Public Interest Technology: Weekly Reading Reflections</h1>
+        <p class="lead fst-italic mb-2">
+          A semester-long notebook on civic technology
+        </p>
+        <p class="mb-0">
+          <strong>Course:</strong> 11.458 Crowd Sourced City
+          &nbsp;|&nbsp; <strong>Semester:</strong> Fall 2026
+        </p>
+        <p class="mb-3"><strong>Author:</strong> Pietro Chiri</p>
       </header>
-      <div class="nav-scroller py-1 mb-3 border-bottom">
-        <nav class="nav nav-underline justify-content-between">
-          <a class="nav-item nav-link link-body-emphasis active" href="#"
-            >World</a
-          >
-          <a class="nav-item nav-link link-body-emphasis" href="#">U.S.</a>
-          <a class="nav-item nav-link link-body-emphasis" href="#"
-            >Technology</a
-          >
-          <a class="nav-item nav-link link-body-emphasis" href="#">Design</a>
-          <a class="nav-item nav-link link-body-emphasis" href="#">Culture</a>
-          <a class="nav-item nav-link link-body-emphasis" href="#">Business</a>
-          <a class="nav-item nav-link link-body-emphasis" href="#">Politics</a>
-          <a class="nav-item nav-link link-body-emphasis" href="#">Opinion</a>
-          <a class="nav-item nav-link link-body-emphasis" href="#">Science</a>
-          <a class="nav-item nav-link link-body-emphasis" href="#">Health</a>
-          <a class="nav-item nav-link link-body-emphasis" href="#">Style</a>
-          <a class="nav-item nav-link link-body-emphasis" href="#">Travel</a>
-        </nav>
-      </div>
     </div>
     <main class="container">
-      <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
-        <div class="col-lg-6 px-0">
-          <h1 class="display-4 fst-italic">
-            Title of a longer featured blog post
-          </h1>
-          <p class="lead my-3">
-            Multiple lines of text that form the lede, informing new readers
-            quickly and efficiently about what’s most interesting in this post’s
-            contents.
-          </p>
-          <p class="lead mb-0">
-            <a href="#" class="text-body-emphasis fw-bold"
-              >Continue reading...</a
-            >
-          </p>
-        </div>
-      </div>
-      <div class="row mb-2">
-        <div class="col-md-6">
-          <div
-            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-          >
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-primary-emphasis"
-                >World</strong
-              >
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-body-secondary">Nov 12</div>
-              <p class="card-text mb-auto">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content.
-              </p>
-              <a
-                href="#"
-                class="icon-link gap-1 icon-link-hover stretched-link"
-              >
-                Continue reading
-                <svg class="bi" aria-hidden="true">
-                  <use xlink:href="#chevron-right"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-              <svg
-                aria-label="Placeholder: Thumbnail"
-                class="bd-placeholder-img"
-                height="250"
-                preserveAspectRatio="xMidYMid slice"
-                role="img"
-                width="200"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c"></rect>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div
-            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-          >
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-success-emphasis"
-                >Design</strong
-              >
-              <h3 class="mb-0">Post title</h3>
-              <div class="mb-1 text-body-secondary">Nov 11</div>
-              <p class="mb-auto">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content.
-              </p>
-              <a
-                href="#"
-                class="icon-link gap-1 icon-link-hover stretched-link"
-              >
-                Continue reading
-                <svg class="bi" aria-hidden="true">
-                  <use xlink:href="#chevron-right"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-              <svg
-                aria-label="Placeholder: Thumbnail"
-                class="bd-placeholder-img"
-                height="250"
-                preserveAspectRatio="xMidYMid slice"
-                role="img"
-                width="200"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c"></rect>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="row g-5">
         <div class="col-md-8">
-          <h3 class="pb-4 mb-4 fst-italic border-bottom">From the Firehose</h3>
-          <article class="blog-post">
-            <h2 class="display-5 link-body-emphasis mb-1">Sample blog post</h2>
-            <p class="blog-post-meta">
-              January 1, 2021 by <a href="#">Mark</a>
-            </p>
-            <p>
-              This blog post shows a few different types of content that’s
-              supported and styled with Bootstrap. Basic typography, lists,
-              tables, images, code, and more are all supported as expected.
-            </p>
-            <hr />
-            <p>
-              This is some additional paragraph placeholder content. It has been
-              written to fill the available space and show how a longer snippet
-              of text affects the surrounding content. We'll repeat it often to
-              keep the demonstration flowing, so be on the lookout for this
-              exact same string of text.
-            </p>
-            <h2>Blockquotes</h2>
-            <p>This is an example blockquote in action:</p>
-            <blockquote class="blockquote">
-              <p>Quoted text goes here.</p>
-            </blockquote>
-            <p>
-              This is some additional paragraph placeholder content. It has been
-              written to fill the available space and show how a longer snippet
-              of text affects the surrounding content. We'll repeat it often to
-              keep the demonstration flowing, so be on the lookout for this
-              exact same string of text.
-            </p>
-            <h3>Example lists</h3>
-            <p>
-              This is some additional paragraph placeholder content. It's a
-              slightly shorter version of the other highly repetitive body text
-              used throughout. This is an example unordered list:
-            </p>
-            <ul>
-              <li>First list item</li>
-              <li>Second list item with a longer description</li>
-              <li>Third list item to close it out</li>
-            </ul>
-            <p>And this is an ordered list:</p>
-            <ol>
-              <li>First list item</li>
-              <li>Second list item with a longer description</li>
-              <li>Third list item to close it out</li>
-            </ol>
-            <p>And this is a definition list:</p>
-            <dl>
-              <dt>HyperText Markup Language (HTML)</dt>
-              <dd>
-                The language used to describe and define the content of a Web
-                page
-              </dd>
-              <dt>Cascading Style Sheets (CSS)</dt>
-              <dd>Used to describe the appearance of Web content</dd>
-              <dt>JavaScript (JS)</dt>
-              <dd>
-                The programming language used to build advanced Web sites and
-                applications
-              </dd>
-            </dl>
-            <h2>Inline HTML elements</h2>
-            <p>
-              HTML defines a long list of available inline tags, a complete list
-              of which can be found on the
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
-                >Mozilla Developer Network</a
-              >.
-            </p>
-            <ul>
-              <li>
-                <strong>To bold text</strong>, use
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;strong&gt;</code
-                >.
-              </li>
-              <li>
-                <em>To italicize text</em>, use
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;em&gt;</code
-                >.
-              </li>
-              <li>
-                Abbreviations, like
-                <abbr title="HyperText Markup Language">HTML</abbr> should use
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;abbr&gt;</code
-                >, with an optional
-                <code class="language-plaintext highlighter-rouge">title</code>
-                attribute for the full phrase.
-              </li>
-              <li>
-                Citations, like <cite>— Mark Otto</cite>, should use
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;cite&gt;</code
-                >.
-              </li>
-              <li>
-                <del>Deleted</del> text should use
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;del&gt;</code
-                >
-                and <ins>inserted</ins> text should use
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;ins&gt;</code
-                >.
-              </li>
-              <li>
-                Superscript <sup>text</sup> uses
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;sup&gt;</code
-                >
-                and subscript <sub>text</sub> uses
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;sub&gt;</code
-                >.
-              </li>
-            </ul>
-            <p>
-              Most of these elements are styled by browsers with few
-              modifications on our part.
-            </p>
-            <h2>Heading</h2>
-            <p>
-              This is some additional paragraph placeholder content. It has been
-              written to fill the available space and show how a longer snippet
-              of text affects the surrounding content. We'll repeat it often to
-              keep the demonstration flowing, so be on the lookout for this
-              exact same string of text.
-            </p>
-            <h3>Sub-heading</h3>
-            <p>
-              This is some additional paragraph placeholder content. It has been
-              written to fill the available space and show how a longer snippet
-              of text affects the surrounding content. We'll repeat it often to
-              keep the demonstration flowing, so be on the lookout for this
-              exact same string of text.
-            </p>
-            <pre><code>Example code block</code></pre>
-            <p>
-              This is some additional paragraph placeholder content. It's a
-              slightly shorter version of the other highly repetitive body text
-              used throughout.
-            </p>
-          </article>
-          <article class="blog-post">
-            <h2 class="display-5 link-body-emphasis mb-1">Another blog post</h2>
-            <p class="blog-post-meta">
-              December 23, 2020 by <a href="#">Jacob</a>
-            </p>
-            <p>
-              This is some additional paragraph placeholder content. It has been
-              written to fill the available space and show how a longer snippet
-              of text affects the surrounding content. We'll repeat it often to
-              keep the demonstration flowing, so be on the lookout for this
-              exact same string of text.
-            </p>
-            <blockquote>
-              <p>
-                Longer quote goes here, maybe with some
-                <strong>emphasized text</strong> in the middle of it.
-              </p>
-            </blockquote>
-            <p>
-              This is some additional paragraph placeholder content. It has been
-              written to fill the available space and show how a longer snippet
-              of text affects the surrounding content. We'll repeat it often to
-              keep the demonstration flowing, so be on the lookout for this
-              exact same string of text.
-            </p>
-            <h3>Example table</h3>
-            <p>And don't forget about tables in these posts:</p>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Upvotes</th>
-                  <th>Downvotes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Alice</td>
-                  <td>10</td>
-                  <td>11</td>
-                </tr>
-                <tr>
-                  <td>Bob</td>
-                  <td>4</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td>Charlie</td>
-                  <td>7</td>
-                  <td>9</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td>Totals</td>
-                  <td>21</td>
-                  <td>23</td>
-                </tr>
-              </tfoot>
-            </table>
-            <p>
-              This is some additional paragraph placeholder content. It's a
-              slightly shorter version of the other highly repetitive body text
-              used throughout.
-            </p>
-          </article>
-          <article class="blog-post">
-            <h2 class="display-5 link-body-emphasis mb-1">New feature</h2>
-            <p class="blog-post-meta">
-              December 14, 2020 by <a href="#">Chris</a>
-            </p>
-            <p>
-              This is some additional paragraph placeholder content. It has been
-              written to fill the available space and show how a longer snippet
-              of text affects the surrounding content. We'll repeat it often to
-              keep the demonstration flowing, so be on the lookout for this
-              exact same string of text.
-            </p>
-            <ul>
-              <li>First list item</li>
-              <li>Second list item with a longer description</li>
-              <li>Third list item to close it out</li>
-            </ul>
-            <p>
-              This is some additional paragraph placeholder content. It's a
-              slightly shorter version of the other highly repetitive body text
-              used throughout.
-            </p>
-          </article>
-          <nav class="blog-pagination" aria-label="Pagination">
-            <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
-            <a
-              class="btn btn-outline-secondary rounded-pill disabled"
-              aria-disabled="true"
-              >Newer</a
-            >
-          </nav>
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            Assignment Reflections
+          </h3>
+          <a class="assignment-card" href="entries/a1.html" id="a1">
+            <div class="assignment-card-frame">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="assignment-card-body">
+                    <h3>A1 — Civic Technology Analysis</h3>
+                    <p class="assignment-card-meta">
+                      Week 1 &middot; Pietro Chiri
+                    </p>
+                    <p class="assignment-card-status">Reflection coming soon</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="assignment-thumb">
+                    <!-- Replace with: <img src="images/a1.jpg" alt=""> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="assignment-card" href="entries/a2.html" id="a2">
+            <div class="assignment-card-frame">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="assignment-card-body">
+                    <h3>A2 — Parcel Interpretation</h3>
+                    <p class="assignment-card-meta">
+                      Week 2 &middot; Pietro Chiri
+                    </p>
+                    <p class="assignment-card-status">Reflection coming soon</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="assignment-thumb">
+                    <!-- Replace with: <img src="images/a2.jpg" alt=""> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="assignment-card" href="entries/a3.html" id="a3">
+            <div class="assignment-card-frame">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="assignment-card-body">
+                    <h3>A3 — Zoning Consequences</h3>
+                    <p class="assignment-card-meta">
+                      Week 3 &middot; Pietro Chiri
+                    </p>
+                    <p class="assignment-card-status">Reflection coming soon</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="assignment-thumb">
+                    <!-- Replace with: <img src="images/a3.jpg" alt=""> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="assignment-card" href="entries/a4.html" id="a4">
+            <div class="assignment-card-frame">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="assignment-card-body">
+                    <h3>A4 — State ADU Decision Tree</h3>
+                    <p class="assignment-card-meta">
+                      Week 4 &middot; Pietro Chiri
+                    </p>
+                    <p class="assignment-card-status">Reflection coming soon</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="assignment-thumb">
+                    <!-- Replace with: <img src="images/a4.jpg" alt=""> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="assignment-card" href="entries/a5.html" id="a5">
+            <div class="assignment-card-frame">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="assignment-card-body">
+                    <h3>A5 — Boston Zoning Rules</h3>
+                    <p class="assignment-card-meta">
+                      Week 5 &middot; Pietro Chiri
+                    </p>
+                    <p class="assignment-card-status">Reflection coming soon</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="assignment-thumb">
+                    <!-- Replace with: <img src="images/a5.jpg" alt=""> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="assignment-card" href="entries/a6.html" id="a6">
+            <div class="assignment-card-frame">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="assignment-card-body">
+                    <h3>A6 — Zoning Database</h3>
+                    <p class="assignment-card-meta">
+                      Week 6 &middot; Pietro Chiri
+                    </p>
+                    <p class="assignment-card-status">Reflection coming soon</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="assignment-thumb">
+                    <!-- Replace with: <img src="images/a6.jpg" alt=""> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="assignment-card" href="entries/a7.html" id="a7">
+            <div class="assignment-card-frame">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="assignment-card-body">
+                    <h3>A7 — GIS Parcel Dataset</h3>
+                    <p class="assignment-card-meta">
+                      Week 7 &middot; Pietro Chiri
+                    </p>
+                    <p class="assignment-card-status">Reflection coming soon</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="assignment-thumb">
+                    <!-- Replace with: <img src="images/a7.jpg" alt=""> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="assignment-card" href="entries/a8.html" id="a8">
+            <div class="assignment-card-frame">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="assignment-card-body">
+                    <h3>A8 — Computational Rule Engine</h3>
+                    <p class="assignment-card-meta">
+                      Week 8 &middot; Pietro Chiri
+                    </p>
+                    <p class="assignment-card-status">Reflection coming soon</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="assignment-thumb">
+                    <!-- Replace with: <img src="images/a8.jpg" alt=""> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="assignment-card" href="entries/a9.html" id="a9">
+            <div class="assignment-card-frame">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="assignment-card-body">
+                    <h3>A9 — Frontend &amp; Backend Connection</h3>
+                    <p class="assignment-card-meta">
+                      Week 9 &middot; Pietro Chiri
+                    </p>
+                    <p class="assignment-card-status">Reflection coming soon</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="assignment-thumb">
+                    <!-- Replace with: <img src="images/a9.jpg" alt=""> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="assignment-card" href="entries/a10.html" id="a10">
+            <div class="assignment-card-frame">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="assignment-card-body">
+                    <h3>A10 — Civic Interface</h3>
+                    <p class="assignment-card-meta">
+                      Week 10 &middot; Pietro Chiri
+                    </p>
+                    <p class="assignment-card-status">Reflection coming soon</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="assignment-thumb">
+                    <!-- Replace with: <img src="images/a10.jpg" alt=""> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="assignment-card" href="entries/a11.html" id="a11">
+            <div class="assignment-card-frame">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="assignment-card-body">
+                    <h3>A11 — Integrated System</h3>
+                    <p class="assignment-card-meta">
+                      Week 11 &middot; Pietro Chiri
+                    </p>
+                    <p class="assignment-card-status">Reflection coming soon</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="assignment-thumb">
+                    <!-- Replace with: <img src="images/a11.jpg" alt=""> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="assignment-card" href="entries/a12.html" id="a12">
+            <div class="assignment-card-frame">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="assignment-card-body">
+                    <h3>A12 — User Testing</h3>
+                    <p class="assignment-card-meta">
+                      Week 12 &middot; Pietro Chiri
+                    </p>
+                    <p class="assignment-card-status">Reflection coming soon</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="assignment-thumb">
+                    <!-- Replace with: <img src="images/a12.jpg" alt=""> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
         <div class="col-md-4">
           <div class="position-sticky" style="top: 2rem">
             <div class="p-4 mb-3 bg-body-tertiary rounded">
               <h4 class="fst-italic">About</h4>
               <p class="mb-0">
-                Customize this section to tell your visitors a little bit about
-                your publication, writers, content, or something else entirely.
-                Totally up to you.
+                This notebook tracks my weekly reading reflections for
+                11.458 Crowd Sourced City, a course on building civic
+                technology for Accessory Dwelling Units (ADUs) in
+                Massachusetts. Each entry corresponds to one of the twelve
+                assignments for the semester.
               </p>
-            </div>
-            <div>
-              <h4 class="fst-italic">Recent posts</h4>
-              <ul class="list-unstyled">
-                <li>
-                  <a
-                    class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                    href="#"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="bd-placeholder-img"
-                      height="96"
-                      preserveAspectRatio="xMidYMid slice"
-                      width="100%"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="100%" height="100%" fill="#777"></rect>
-                    </svg>
-                    <div class="col-lg-8">
-                      <h6 class="mb-0">Example blog post title</h6>
-                      <small class="text-body-secondary"
-                        >January 15, 2024</small
-                      >
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                    href="#"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="bd-placeholder-img"
-                      height="96"
-                      preserveAspectRatio="xMidYMid slice"
-                      width="100%"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="100%" height="100%" fill="#777"></rect>
-                    </svg>
-                    <div class="col-lg-8">
-                      <h6 class="mb-0">This is another blog post title</h6>
-                      <small class="text-body-secondary"
-                        >January 14, 2024</small
-                      >
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                    href="#"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="bd-placeholder-img"
-                      height="96"
-                      preserveAspectRatio="xMidYMid slice"
-                      width="100%"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="100%" height="100%" fill="#777"></rect>
-                    </svg>
-                    <div class="col-lg-8">
-                      <h6 class="mb-0">
-                        Longer blog post title: This one has multiple lines!
-                      </h6>
-                      <small class="text-body-secondary"
-                        >January 13, 2024</small
-                      >
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="p-4">
-              <h4 class="fst-italic">Archives</h4>
-              <ol class="list-unstyled mb-0">
-                <li><a href="#">March 2021</a></li>
-                <li><a href="#">February 2021</a></li>
-                <li><a href="#">January 2021</a></li>
-                <li><a href="#">December 2020</a></li>
-                <li><a href="#">November 2020</a></li>
-                <li><a href="#">October 2020</a></li>
-                <li><a href="#">September 2020</a></li>
-                <li><a href="#">August 2020</a></li>
-                <li><a href="#">July 2020</a></li>
-                <li><a href="#">June 2020</a></li>
-                <li><a href="#">May 2020</a></li>
-                <li><a href="#">April 2020</a></li>
-              </ol>
-            </div>
-            <div class="p-4">
-              <h4 class="fst-italic">Elsewhere</h4>
-              <ol class="list-unstyled">
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">Social</a></li>
-                <li><a href="#">Facebook</a></li>
-              </ol>
             </div>
           </div>
         </div>
       </div>
     </main>
     <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
-      <p>
-        Blog template built for
-        <a href="https://getbootstrap.com/">Bootstrap</a> by
-        <a href="https://x.com/mdo">@mdo</a>.
+      <p class="mb-0">
+        Weekly Reading Reflections &middot; Pietro Chiri &middot; Fall 2026
+        &middot; 11.458 Crowd Sourced City
       </p>
       <p class="mb-0"><a href="#">Back to top</a></p>
     </footer>
     <script
-      src="assets/dist/js/bootstrap.bundle.min.js"
+      src="../assets/dist/js/bootstrap.bundle.min.js"
       class="astro-vvvwv3sm"
     ></script>
   </body>
